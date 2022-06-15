@@ -4,7 +4,7 @@ function anagrams(word, words) {
   lettersArr = [];
   outArr = [];
   
-  //put letters of word param into empty array and sort;
+  //put letters of word param into empty array and sort
   for(letters of word){
     lettersArr.push(letters);
     lettersArr.sort();
@@ -26,16 +26,16 @@ function anagrams(word, words) {
     if(x==y){
       outArr.push(words[index]);
     }
-    //increment index of where we are in original input array
+    //increment index to locate word in original array
     index++;
     
   }
   
-  //return our output array if it contains matches, else return empty array. 
-  if(outArr && outArr.length){
-    return outArr;
-  }
-  else{
-    return [];
+  //return our output array if it contains matches, else return empty array
+  switch(outArr.length>0){
+      case true:
+        return outArr;
+      case false:
+        return [];
   }
 }
